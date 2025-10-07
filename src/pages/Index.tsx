@@ -125,7 +125,7 @@ const Index = () => {
                 DJNIKZZ
               </h3>
               <p className="text-muted-foreground" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                Elevating events since 2019
+                Elevating events since 2025
               </p>
             </div>
 
