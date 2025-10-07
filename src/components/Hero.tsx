@@ -8,7 +8,7 @@ interface HeroProps {
 
 export const Hero = ({ onBookEvent }: HeroProps) => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-0">
       {/* Background image with overlay */}
       <div 
         className="absolute inset-0 z-0"
@@ -28,54 +28,54 @@ export const Hero = ({ onBookEvent }: HeroProps) => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 text-center">
-        <div className="space-y-6 md:space-y-8 animate-fade-in-up">
-          <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-6 text-center">
+        <div className="space-y-8 md:space-y-8 animate-fade-in-up">
+          <h1 className="text-6xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none" style={{ fontFamily: 'Orbitron, sans-serif' }}>
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               DJNIKZZ
             </span>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-wide text-muted-foreground max-w-3xl mx-auto px-4" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-wide text-muted-foreground max-w-3xl mx-auto" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
             Elevate Your Events with Unforgettable Beats
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-4 md:pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-6 md:pt-8">
             <Button 
               variant="neon"
               size="lg"
               onClick={onBookEvent}
-              className="text-base md:text-lg px-8 md:px-10 py-6 md:py-7 w-full sm:w-auto"
+              className="text-lg md:text-lg px-10 md:px-10 py-6 md:py-7 w-full sm:w-auto max-w-sm"
               style={{ fontFamily: 'Rajdhani, sans-serif' }}
             >
-              <Calendar className="mr-2 md:mr-3 h-5 w-5 md:h-6 md:w-6" />
+              <Calendar className="mr-3 md:mr-3 h-5 w-5 md:h-6 md:w-6" />
               Book an Event
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 md:gap-8 pt-12 md:pt-16 max-w-3xl mx-auto px-4">
-            <div className="space-y-1 md:space-y-2">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+          <div className="grid grid-cols-3 gap-6 md:gap-8 pt-16 md:pt-16 max-w-3xl mx-auto">
+            <div className="space-y-2 md:space-y-2">
+              <div className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent leading-none" style={{ fontFamily: 'Orbitron, sans-serif' }}>
                 100%
               </div>
-              <div className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+              <div className="text-sm sm:text-sm md:text-base text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                 Client Satisfaction
               </div>
             </div>
-            <div className="space-y-1 md:space-y-2">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+            <div className="space-y-2 md:space-y-2">
+              <div className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent leading-none" style={{ fontFamily: 'Orbitron, sans-serif' }}>
                 5★
               </div>
-              <div className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+              <div className="text-sm sm:text-sm md:text-base text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                 Rated Experience
               </div>
             </div>
-            <div className="space-y-1 md:space-y-2">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+            <div className="space-y-2 md:space-y-2">
+              <div className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent leading-none" style={{ fontFamily: 'Orbitron, sans-serif' }}>
                 1K+
               </div>
-              <div className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+              <div className="text-sm sm:text-sm md:text-base text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                 Happy Guests
               </div>
             </div>
