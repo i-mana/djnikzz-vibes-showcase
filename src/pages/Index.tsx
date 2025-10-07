@@ -131,7 +131,7 @@ const Index = () => {
             </div>
 
             <div className="flex gap-6">
-              <Button
+              {/* <Button
                 variant="ghost"
                 size="icon"
                 asChild
@@ -145,7 +145,7 @@ const Index = () => {
                 >
                   <Instagram className="h-6 w-6" />
                 </a>
-              </Button>
+              </Button> */}
               <Button
                 variant="ghost"
                 size="icon"
