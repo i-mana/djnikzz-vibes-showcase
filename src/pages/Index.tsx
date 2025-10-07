@@ -50,8 +50,9 @@ const Index = () => {
               About DJNikzz
             </h2>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-              With over 5 years of experience and 500+ successful events, DJNikzz specializes in creating unforgettable musical experiences. 
-              From traditional Indian celebrations to high-energy EDM parties, we bring the perfect soundtrack to your special moments.
+              DJNikzz brings fresh energy and passion to every event. Specializing in Indian celebrations and EDM parties, 
+              we create personalized musical experiences that make your guests talk about your event for months. 
+              Every party is treated like our own - with attention to detail, crowd reading, and seamless mixing that keeps the dance floor packed.
             </p>
           </div>
         </div>

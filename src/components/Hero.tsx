@@ -57,26 +57,26 @@ export const Hero = ({ onBookEvent }: HeroProps) => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-16 max-w-3xl mx-auto">
             <div className="space-y-2">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, sans-serif' }}>
-                500+
+                100%
               </div>
               <div className="text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                Events
+                Client Satisfaction
               </div>
             </div>
             <div className="space-y-2">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, sans-serif' }}>
-                50K+
+                5★
               </div>
               <div className="text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                Happy Guests
+                Rated Experience
               </div>
             </div>
             <div className="space-y-2 col-span-2 md:col-span-1">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, sans-serif' }}>
-                5+
+                1K+
               </div>
               <div className="text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                Years Experience
+                Happy Guests
               </div>
             </div>
           </div>
