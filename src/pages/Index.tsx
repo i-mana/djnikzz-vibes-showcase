@@ -10,8 +10,7 @@ import edmEventsImage from "@/assets/edm-events.jpg";
 const Index = () => {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
   
-  // Replace this with your actual Calendly URL
-  const calendlyUrl = "https://calendly.com/your-calendly-username";
+  const calendlyUrl = "https://calendly.com/grithin25295/30min";
 
   const events = [
     {
