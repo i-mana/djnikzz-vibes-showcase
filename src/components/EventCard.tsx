@@ -15,7 +15,7 @@ export const EventCard = ({ title, description, image, gradient, icon = "music" 
   return (
     <Card className="group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-glow-cyan transition-all duration-500 hover:scale-[1.02]">
       {/* Image */}
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
         <img 
           src={image} 
           alt={title}
@@ -25,23 +25,23 @@ export const EventCard = ({ title, description, image, gradient, icon = "music" 
       </div>
 
       {/* Content */}
-      <div className="p-8 space-y-4">
-        <div className="flex items-center gap-3">
-          <div className="p-3 rounded-lg bg-gradient-primary">
-            <Icon className="h-6 w-6" />
+      <div className="p-4 sm:p-6 md:p-8 space-y-3 md:space-y-4">
+        <div className="flex items-center gap-2 md:gap-3">
+          <div className="p-2 md:p-3 rounded-lg bg-gradient-primary">
+            <Icon className="h-5 w-5 md:h-6 md:w-6" />
           </div>
-          <h3 className="text-3xl font-bold" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold" style={{ fontFamily: 'Orbitron, sans-serif' }}>
             {title}
           </h3>
         </div>
         
-        <p className="text-lg text-muted-foreground leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+        <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
           {description}
         </p>
 
         {/* Decorative line */}
-        <div className="pt-4">
-          <div className="h-1 w-20 bg-gradient-primary rounded-full" />
+        <div className="pt-2 md:pt-4">
+          <div className="h-1 w-16 md:w-20 bg-gradient-primary rounded-full" />
         </div>
       </div>
     </Card>

@@ -23,59 +23,59 @@ export const Hero = ({ onBookEvent }: HeroProps) => {
 
       {/* Animated background elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-neon-cyan/20 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-neon-pink/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-10 md:top-20 left-5 md:left-10 w-48 h-48 md:w-72 md:h-72 bg-neon-cyan/20 rounded-full blur-3xl animate-pulse-glow" />
+        <div className="absolute bottom-10 md:bottom-20 right-5 md:right-10 w-64 h-64 md:w-96 md:h-96 bg-neon-pink/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        <div className="space-y-8 animate-fade-in-up">
-          <h1 className="text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 text-center">
+        <div className="space-y-6 md:space-y-8 animate-fade-in-up">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter" style={{ fontFamily: 'Orbitron, sans-serif' }}>
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               DJNIKZZ
             </span>
           </h1>
           
-          <p className="text-2xl md:text-3xl font-light tracking-wide text-muted-foreground max-w-3xl mx-auto" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-wide text-muted-foreground max-w-3xl mx-auto px-4" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
             Elevate Your Events with Unforgettable Beats
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-4 md:pt-8">
             <Button 
               variant="neon"
               size="lg"
               onClick={onBookEvent}
-              className="text-lg px-10 py-7"
+              className="text-base md:text-lg px-8 md:px-10 py-6 md:py-7 w-full sm:w-auto"
               style={{ fontFamily: 'Rajdhani, sans-serif' }}
             >
-              <Calendar className="mr-3 h-6 w-6" />
+              <Calendar className="mr-2 md:mr-3 h-5 w-5 md:h-6 md:w-6" />
               Book an Event
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-16 max-w-3xl mx-auto">
-            <div className="space-y-2">
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+          <div className="grid grid-cols-3 gap-4 md:gap-8 pt-12 md:pt-16 max-w-3xl mx-auto px-4">
+            <div className="space-y-1 md:space-y-2">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, sans-serif' }}>
                 100%
               </div>
-              <div className="text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+              <div className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                 Client Satisfaction
               </div>
             </div>
-            <div className="space-y-2">
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+            <div className="space-y-1 md:space-y-2">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, sans-serif' }}>
                 5★
               </div>
-              <div className="text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+              <div className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                 Rated Experience
               </div>
             </div>
-            <div className="space-y-2 col-span-2 md:col-span-1">
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+            <div className="space-y-1 md:space-y-2">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-secondary bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, sans-serif' }}>
                 1K+
               </div>
-              <div className="text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+              <div className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                 Happy Guests
               </div>
             </div>
@@ -84,7 +84,7 @@ export const Hero = ({ onBookEvent }: HeroProps) => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
+      <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 animate-float hidden sm:flex">
         <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
         </div>
