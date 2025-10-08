@@ -10,7 +10,7 @@ import edmEventsImage from "@/assets/edm-events.jpg";
 const Index = () => {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
   
-  const calendlyUrl = "https://calendly.com/grithin25295/30min";
+  const calendlyUrl = "https://calendly.com/djnikzz25/30min";
 
   const events = [
     {
