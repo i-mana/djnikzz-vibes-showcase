@@ -24,28 +24,28 @@ export const CalendlyModal = ({ open, onOpenChange, calendlyUrl }: CalendlyModal
           console.log('Calendly event scheduled:', e.data);
           
           try {
-            // Extract booking details from the event payload
             const payload = e.data.payload;
             
-            // Save booking to database
+            // Save booking details to database
             const { error } = await supabase.from('bookings').insert({
-              event_type: payload.event?.name || 'Unknown Event',
+              event_type: payload.event?.name || 'Event Booking',
               invitee_name: payload.invitee?.name || '',
               invitee_email: payload.invitee?.email || '',
-              invitee_notes: payload.invitee?.text_reminder_number || '',
-              event_start_time: payload.event?.start_time,
-              event_end_time: payload.event?.end_time,
-              calendly_event_uri: payload.event?.uri || ''
+              invitee_notes: payload.questions_and_answers?.[0]?.answer || null,
+              event_start_time: payload.event?.start_time || null,
+              event_end_time: payload.event?.end_time || null,
+              calendly_event_uri: payload.event?.uri || null,
             });
 
             if (error) {
               console.error('Error saving booking:', error);
+              toast.error('Booking scheduled but failed to save details');
             } else {
               console.log('Booking saved successfully');
-              toast.success('Booking details saved for analytics!');
+              toast.success('Event scheduled successfully!');
             }
           } catch (error) {
-            console.error('Error processing booking event:', error);
+            console.error('Error processing booking:', error);
           }
         }
       };
