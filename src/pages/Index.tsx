@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Instagram, Mail, Phone, Calendar } from "lucide-react";
 import indianEventsImage from "@/assets/indian-events.jpg";
 import edmEventsImage from "@/assets/edm-events.jpg";
+import customEventsImage from "@/assets/custom-events.jpg";
 
 const Index = () => {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
@@ -30,7 +31,7 @@ const Index = () => {
     {
       title: "Custom Events",
       description: "Weddings, corporate events, private parties - we customize our setlist to match your vision. Your event, your vibe, our expertise.",
-      image: indianEventsImage,
+      image: customEventsImage,
       gradient: "bg-gradient-to-br from-purple-500/50 to-pink-500/50",
       icon: "sparkles" as const,
     },
