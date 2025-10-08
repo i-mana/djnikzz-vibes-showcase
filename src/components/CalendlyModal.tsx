@@ -1,5 +1,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 interface CalendlyModalProps {
   open: boolean;
@@ -16,8 +18,43 @@ export const CalendlyModal = ({ open, onOpenChange, calendlyUrl }: CalendlyModal
       script.async = true;
       document.body.appendChild(script);
 
+      // Listen for Calendly events
+      const handleCalendlyEvent = async (e: MessageEvent) => {
+        if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+          console.log('Calendly event scheduled:', e.data);
+          
+          try {
+            // Extract booking details from the event payload
+            const payload = e.data.payload;
+            
+            // Save booking to database
+            const { error } = await supabase.from('bookings').insert({
+              event_type: payload.event?.name || 'Unknown Event',
+              invitee_name: payload.invitee?.name || '',
+              invitee_email: payload.invitee?.email || '',
+              invitee_notes: payload.invitee?.text_reminder_number || '',
+              event_start_time: payload.event?.start_time,
+              event_end_time: payload.event?.end_time,
+              calendly_event_uri: payload.event?.uri || ''
+            });
+
+            if (error) {
+              console.error('Error saving booking:', error);
+            } else {
+              console.log('Booking saved successfully');
+              toast.success('Booking details saved for analytics!');
+            }
+          } catch (error) {
+            console.error('Error processing booking event:', error);
+          }
+        }
+      };
+
+      window.addEventListener('message', handleCalendlyEvent);
+
       return () => {
         document.body.removeChild(script);
+        window.removeEventListener('message', handleCalendlyEvent);
       };
     }
   }, [open]);

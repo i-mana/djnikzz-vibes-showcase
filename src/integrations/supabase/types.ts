@@ -14,7 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      bookings: {
+        Row: {
+          calendly_event_uri: string | null
+          created_at: string
+          event_end_time: string | null
+          event_start_time: string | null
+          event_type: string
+          id: string
+          invitee_email: string
+          invitee_name: string
+          invitee_notes: string | null
+          updated_at: string
+        }
+        Insert: {
+          calendly_event_uri?: string | null
+          created_at?: string
+          event_end_time?: string | null
+          event_start_time?: string | null
+          event_type: string
+          id?: string
+          invitee_email: string
+          invitee_name: string
+          invitee_notes?: string | null
+          updated_at?: string
+        }
+        Update: {
+          calendly_event_uri?: string | null
+          created_at?: string
+          event_end_time?: string | null
+          event_start_time?: string | null
+          event_type?: string
+          id?: string
+          invitee_email?: string
+          invitee_name?: string
+          invitee_notes?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
